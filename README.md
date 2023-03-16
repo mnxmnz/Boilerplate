@@ -1,3 +1,3 @@
 # My own boilerplate
 
-TS, Next, Emotion, Recoil, Axios, Tanstack-Query, MSW, ESLint, Prettier, Husky
+TypeScript, Next.js, Emotion, Recoil, Axios, Tanstack-Query, MSW, ESLint, Prettier, Stylelint, Husky
