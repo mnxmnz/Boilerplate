@@ -11,7 +11,9 @@
   "lint-staged": {
     "src/**/*.{js,ts,tsx}": [
       "yarn lint:eslint",
-      "yarn lint:prettier",
+      "yarn lint:prettier"
+    ],
+    "src/**/*.ts": [
       "yarn lint:stylelint"
     ]
   },
@@ -19,10 +21,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prepare": "husky install",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint --fix \"./**/*.{js,ts,tsx}\" --ignore-path .gitignore",
     "lint:prettier": "prettier --write \"./**/*.{js,ts,tsx}\" --ignore-path .gitignore",
-    "lint:stylelint": "stylelint --fix \"./**/*.tsx\" --ignore-path .gitignore"
+    "lint:stylelint": "stylelint --fix \"./**/*.ts\" --ignore-path .gitignore"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -54,8 +57,10 @@
     "lint-staged": "^13.2.0",
     "msw": "^1.1.0",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.23",
+    "postcss-syntax": "^0.36.2",
     "prettier": "^2.8.4",
-    "stylelint": "^15.2.0",
+    "stylelint": "^15.6.1",
     "stylelint-config-concentric-order": "^5.1.0",
     "stylelint-config-standard": "^30.0.1",
     "typescript": "^4.9.5"
