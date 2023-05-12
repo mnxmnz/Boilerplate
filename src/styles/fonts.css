@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'NanumSquareRound';
+  font-display: swap;
+  src: local('NanumSquareRound Light'), url('./fonts/NanumSquareRoundL.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  font-display: swap;
+  src: local('NanumSquareRound Regular'), url('./fonts/NanumSquareRoundR.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  font-display: swap;
+  src: local('NanumSquareRound Bold'), url('./fonts/NanumSquareRoundB.ttf') format('truetype');
+}

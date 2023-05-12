@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@emotion/react';
+import { Global, ThemeProvider } from '@emotion/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import type { AppProps } from 'next/app';
@@ -6,12 +6,15 @@ import Head from 'next/head';
 import { RecoilRoot } from 'recoil';
 
 import initMockAPI from '@/mocks';
-import GlobalStyle from '@/styles/GlobalStyle';
+import globalStyle from '@/styles/globalStyle';
 import theme from '@/styles/theme';
+import '@/styles/fonts.css';
 
 const queryClient = new QueryClient();
 
-initMockAPI();
+if (process.env.NODE_ENV === 'development') {
+  initMockAPI();
+}
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -22,7 +25,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <GlobalStyle />
+      <Global styles={globalStyle} />
       <ThemeProvider theme={theme}>
         <RecoilRoot>
           <QueryClientProvider client={queryClient}>

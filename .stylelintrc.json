@@ -1,9 +1,4 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-concentric-order"],
-  "overrides": [
-    {
-      "files": ["**/*.tsx"],
-      "customSyntax": "@stylelint/postcss-css-in-js"
-    }
-  ]
+  "customSyntax": "@stylelint/postcss-css-in-js",
+  "extends": ["stylelint-config-standard", "stylelint-config-concentric-order"]
 }
